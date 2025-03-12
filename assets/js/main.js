@@ -235,3 +235,14 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+
+// membuat angka menjadi format rupiah
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+      document.querySelectorAll('.purecounter').forEach(el => {
+          el.innerText = Number(el.innerText).toLocaleString('id-ID');
+      });
+  }, 1500); // Tunggu sedikit agar PureCounter selesai menghitung
+});
