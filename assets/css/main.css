@@ -834,6 +834,8 @@ section,
   color: var(--accent-color);
 }
 
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -1132,8 +1134,36 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
+
+.infografis-title {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #059652; /* Green text color */
+  background-color: #e8f7ee; /* Light green background */
+  border-radius: 25px; /* Rounded corners */
+  padding: 8px 20px;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.skills .description-title  {
+  color: var(--accent-color);
+}
+
+.skills .skill-infografis {
+  font-size: 38px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 8rem;
+}
+
 .skills .progress {
   height: 60px;
+  width: 100%;
   display: block;
   background: none;
   border-radius: 0;
@@ -1169,6 +1199,18 @@ section,
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
+
+.stats .description-title  {
+  color: var(--accent-color);
+}
+
+.stats .skill-infografis {
+  font-size: 38px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+
 .stats i {
   background-color: var(--accent-color);
   color: var(--contrast-color);
