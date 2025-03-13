@@ -1317,13 +1317,89 @@ section,
   margin-bottom: 0;
 }
 
-.services .service-item:hover {
+/* .services .service-item:hover {
   border-color: var(--accent-color);
 }
 
 .services .service-item:hover h3 {
   color: var(--accent-color);
+} */
+
+
+.services .service-item {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--surface-color);
+  text-align: center;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  padding: 80px 20px;
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+  height: 100%;
 }
+
+/* Pseudo-element untuk efek hover */
+.services .service-item::before {
+  content: "";
+  position: absolute;
+  bottom: -100%; /* Mulai dari bawah */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3ea856;
+  transition: bottom 0.5s ease-in-out;
+  z-index: 0;
+}
+
+/* Efek ketika di-hover */
+.services .service-item:hover::before {
+  bottom: 0; /* Naik ke atas */
+}
+
+/* Agar teks dan ikon tetap terlihat di atas efek hover */
+.services .service-item * {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Ubah warna teks dan ikon saat hover */
+.services .service-item:hover h3,
+.services .service-item:hover p,
+.services .service-item:hover .icon i {
+  color: #ffffff;
+}
+
+/* Style untuk icon */
+.services .service-item .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #3ea856; /* Warna default ikon */
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Warna ikon */
+.services .service-item .icon i {
+  color: #ffffff; /* Warna icon default */
+  font-size: 28px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Efek hover untuk ikon */
+.services .service-item:hover .icon {
+  background-color: #ffffff; /* Background ikon berubah jadi putih */
+}
+
+.services .service-item:hover .icon i {
+  color: #3ea856; /* Warna icon berubah jadi hijau */
+}
+
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
