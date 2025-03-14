@@ -1091,19 +1091,19 @@ section,
 
 /* Setting specific background images for each card */
 .featured-services .service-item:has(.card-content-1):before {
-  background-image: url('./img/ai-image/barier-pesisir.jpeg');
+  background-image: url('../img/ai-image/barier-pesisir..jpeg');
 }
 
 .featured-services .service-item:has(.card-content-2):before {
-  background-image: url('./img/ai-image/bendungan.jpeg');
+  background-image: url('../img/ai-image/bendungan.jpeg');
 }
 
 .featured-services .service-item:has(.card-content-3):before {
-  background-image: url('./img/ai-image/jalur-terblokir.jpeg');
+  background-image: url('../img/ai-image/jalur-terblokir.jpeg');
 }
 
 .featured-services .service-item:has(.card-content-4):before {
-  background-image: url('./img/ai-image/pakar-edukasi.jpeg');
+  background-image: url('../img/ai-image/pakar-edukasi.jpeg');
   
 }
 
@@ -1454,27 +1454,27 @@ section,
 
 /* Background image yang berbeda untuk setiap card */
 .services .row > div:nth-child(1) .service-item::before {
-  background-image: url('./img/solusi/3r.jpeg');
+  background-image: url('../img/solusi/3r.jpeg');
 }
 
 .services .row > div:nth-child(2) .service-item::before {
-  background-image: url('./img/solusi/bank-sampah.jpeg');
+  background-image: url('../img/solusi/bank-sampah.jpeg');
 }
 
 .services .row > div:nth-child(3) .service-item::before {
-  background-image: url('./img/solusi/gerakan-pantai-bersih.jpeg');
+  background-image: url('../img/solusi/gerakan-pantai-bersih.jpeg');
 }
 
 .services .row > div:nth-child(4) .service-item::before {
-  background-image: url('./img/solusi/edukas-kampanye.jpeg');
+  background-image: url('../img/solusi/edukas-kampanye.jpeg');
 }
 
 .services .row > div:nth-child(5) .service-item::before {
-  background-image: url('./img/solusi/inovasi-teknologi.jpeg');
+  background-image: url('../img/solusi/inovasi-teknologi.jpeg');
 }
 
 .services .row > div:nth-child(6) .service-item::before {
-  background-image: url('./img/solusi/regulasi-sanksi.jpeg');
+  background-image: url('../img/solusi/regulasi-sanksi.jpeg');
 }
 
 
