@@ -961,16 +961,7 @@ section,
 /*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
-.featured-services .service-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
-  transition: all 0.3s ease-in-out;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-  
-}
+
 
 
 
@@ -978,19 +969,29 @@ section,
   min-height: 80px; /* Adjust this value based on the tallest heading */
   display: flex;
   align-items: flex-start;
-  padding-bottom: 4.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
 }
 .card-content-2  h4 {
   min-height: 80px; /* Adjust this value based on the tallest heading */
   display: flex;
   align-items: flex-start;
   padding-bottom: 4.5rem;
+  text-align: center;
 }
 .card-content-3  h4 {
   min-height: 80px; /* Adjust this value based on the tallest heading */
   display: flex;
   align-items: flex-start;
   padding-bottom: 3rem;
+  text-align: center;
+}
+.card-content-4  h4 {
+  min-height: 80px; /* Adjust this value based on the tallest heading */
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 3rem;
+  text-align: center;
 }
 
 @media  (max-width: 768px) {
@@ -1007,6 +1008,9 @@ section,
     padding-bottom: 0;
   }
 }
+
+
+
 @media (max-width: 1200px) {
   .card-content-1  h4 {
     min-height: 0;
@@ -1026,28 +1030,119 @@ section,
     align-items: flex-start;
     padding-bottom: 1.5rem;
   }
+  .card-content-4  h4 {
+    min-height: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 1400px) {
+  .card-content-1  h4 {
+    min-height: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 4.5rem;
+  }
+  .card-content-2  h4 {
+    min-height: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 4.5rem;
+  }
+  .card-content-3  h4 {
+    min-height: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+  }
+  .card-content-4  h4 {
+    min-height: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
 }
 
- 
 
+.featured-services .service-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  position: relative;
+  z-index: 1;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .featured-services .service-item:before {
   content: "";
   position: absolute;
-  background: var(--accent-color);
   inset: 100% 0 0 0;
   transition: all 0.3s;
   z-index: -1;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.85; /* Adding slight transparency to ensure text is readable */
+}
+
+/* Setting specific background images for each card */
+.featured-services .service-item:has(.card-content-1):before {
+  background-image: url('../img/ai-image/barier-pesisir.jpeg');
+}
+
+.featured-services .service-item:has(.card-content-2):before {
+  background-image: url('../img/ai-image/bendungan.jpeg');
+}
+
+.featured-services .service-item:has(.card-content-3):before {
+  background-image: url('../img/ai-image/jalur-terblokir.jpeg');
+}
+
+.featured-services .service-item:has(.card-content-4):before {
+  background-image: url('../img/ai-image/pakar-edukasi.jpeg');
+  
+}
+
+.featured-services .service-item:hover .icon i {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .featured-services .service-item .icon {
-  margin-bottom: 10px;
+  margin: 0 auto;
+  width: 60px;
+  height: 50px;
+  background: #3ea856; /* Warna default ikon */
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+
 .featured-services .service-item .icon i {
-  color: var(--accent-color);
-  font-size: 36px;
-  transition: ease-in-out 0.3s;
+  color: #ffffff; /* Warna icon default */
+  font-size: 28px;
+  transition: color 0.1s ease-in-out;
+}
+
+.featured-services .service-item:hover .icon {
+  background: #ffffff; /* Warna background berubah jadi putih */
+}
+
+.featured-services .service-item:hover .icon i {
+  color: #3ea856; /* Warna icon berubah jadi hijau */
+}
+
+.featured-services .service-item [class^="card-content"] {
+  width: 100%;
+  text-align: center;
 }
 
 .featured-services .service-item h4 {
@@ -1066,6 +1161,7 @@ section,
   font-size: 14px;
   margin-bottom: 0;
   transition: ease-in-out 0.3s;
+  text-align: left;
 }
 
 .featured-services .service-item:hover h4 a,
@@ -1075,11 +1171,9 @@ section,
 }
 
 .featured-services .service-item:hover:before {
-  background: var(--accent-color);
   inset: 0;
   border-radius: 0px;
 }
-
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -1277,11 +1371,13 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services .service-item {
+  position: relative;
+  overflow: hidden;
   background-color: var(--surface-color);
   text-align: center;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   padding: 80px 20px;
-  transition: border ease-in-out 0.3s;
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
   height: 100%;
 }
 
@@ -1337,7 +1433,6 @@ section,
   height: 100%;
 }
 
-/* Pseudo-element untuk efek hover */
 .services .service-item::before {
   content: "";
   position: absolute;
@@ -1345,15 +1440,43 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #3ea856;
-  transition: bottom 0.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  transition: bottom 0.3s ease-in-out;
   z-index: 0;
+  opacity: 0.85; /* Membuat gambar sedikit transparan agar teks tetap terbaca */
 }
 
 /* Efek ketika di-hover */
 .services .service-item:hover::before {
   bottom: 0; /* Naik ke atas */
 }
+
+/* Background image yang berbeda untuk setiap card */
+.services .row > div:nth-child(1) .service-item::before {
+  background-image: url('../img/solusi/3r.jpeg');
+}
+
+.services .row > div:nth-child(2) .service-item::before {
+  background-image: url('../img/solusi/bank-sampah.jpeg');
+}
+
+.services .row > div:nth-child(3) .service-item::before {
+  background-image: url('../img/solusi/gerakan-pantai-bersih.jpeg');
+}
+
+.services .row > div:nth-child(4) .service-item::before {
+  background-image: url('../img/solusi/edukas-kampanye.jpeg');
+}
+
+.services .row > div:nth-child(5) .service-item::before {
+  background-image: url('../img/solusi/inovasi-teknologi.jpeg');
+}
+
+.services .row > div:nth-child(6) .service-item::before {
+  background-image: url('../img/solusi/regulasi-sanksi.jpeg');
+}
+
 
 /* Agar teks dan ikon tetap terlihat di atas efek hover */
 .services .service-item * {
@@ -1367,6 +1490,7 @@ section,
 .services .service-item:hover p,
 .services .service-item:hover .icon i {
   color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* Style untuk icon */
